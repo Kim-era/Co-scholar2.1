@@ -22,3 +22,17 @@ const db = require("./config/db");
 db.execute("SELECT 1")
   .then(() => console.log("✅ Database connected"))
   .catch(err => console.error("❌ DB connection failed:", err.message));
+
+  
+const db = require("./config/db");
+
+(async () => {
+  await db.execute(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(100),
+      email VARCHAR(100),
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+})();
