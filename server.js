@@ -1,11 +1,38 @@
-require("dotenv").config();
-const express = require("express");
-const db = require("./config/db"); // ✅ ONLY ONCE
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import db from "./config/db.js";
+import authRoutes from "./routes/auth.routes.js";
+import libraryRoutes from "./routes/libraryRoutes.js";
+import communityRoutes from "./routes/communityRoutes.js";
+import categoriesRoute from './routes/categoriesroutes.js';
+import searchRoute from "./routes/search.js";
+import repliesRoute from "./routes/replies.js";
+import threadsRoute from './routes/threads.js';
+import morgan from "morgan";
+
+dotenv.config();
 
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
+app.use(morgan("dev")); // logs method, path, status
 
+app.use("/api/auth",authRoutes);
+app.use('/api/categories', categoriesRoute);
+app.use("/api/library", libraryRoutes);
+app.use("/api/community", communityRoutes);
+
+// Routes
+app.use('/api/threads', threadsRoute);
+app.use('/api/replies', repliesRoute);
+app.use('/api/search', searchRoute);
 // routes
 app.get("/", (req, res) => {
   res.send("Co-scholar2.1 🚀");

@@ -1,0 +1,132 @@
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.about-section {
+  margin: 70px 0;
+}
+
+.about-section.light {
+  background: #f9f9f9;
+  padding: 50px;
+  border-radius: 16px;
+}
+
+.about-section h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about-section p {
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Pillars */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.pillar-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Creators */
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.creator-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.creator-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.creator-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.engage-card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.engage-card:hover {
+  transform: translateY(-6px);
+}
+
+.engage-card h3 {
+  margin-bottom: 10px;
+}
+
+.engage-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.engage-card a {
+  font-weight: 600;
+  color: #f97316;
+  text-decoration: none;
+}
+
+.engage-card a:hover {
+  text-decoration: underline;
+}

@@ -1,8 +1,8 @@
-const db = require("../config/db");
+import db from "../config/db";
 
-exports.createUser = (name, email) => {
-  const sql = "INSERT INTO users (name, email) VALUES (?, ?)";
-  return db.execute(sql, [name, email]);
+exports.createUser = (email,password,role) => {
+  const sql = "INSERT INTO users (name, email,role) VALUES (?, ?)";
+  return db.execute(sql, [email,password,role]);
 };
 
 exports.getAllUsers = () => {
